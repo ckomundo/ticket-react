@@ -2,10 +2,23 @@ import React from "react";
 import ReactToPrint from "react-to-print";
 import PropTypes from "prop-types";
 
-class ComponentToPrint extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {
+
+          city: "Guasave",
+          fecha: "24/12/19",
+          product: "condones ",
+          cost: "10",
+          tel: "6871282885",
+          use: "fausto",
+          cant: "1",
+          pre: "20",
+          imp: "20"
+
+
+      };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,7 +36,7 @@ class ComponentToPrint extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} >
         <label>
           Name:
           <input type="text" value={this.state.value} onChange={this.handleChange} />
@@ -46,35 +59,7 @@ class ComponentToPrint extends React.Component {
   }
 }
 
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <ReactToPrint
-          trigger={() => <a href="#">Print this out!</a>}
-          content={() => this.componentRef}
-        />
-        <ComponentToPrint ref={el => (this.componentRef = el)} />
-      </div>
-    );
-  }
-}
-
-class NameForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {value: ''};
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
 
 
 
-  render() {
-    return (
-
-    );
-  }
-}
 export default App;
