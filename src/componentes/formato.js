@@ -8,10 +8,15 @@ class Format extends React.Component {
       product: "condones ",
       cost: "10",
       tel: "6871282885",
-      use: "fausto"
+      use: "fausto",
+      cant: "1",
+      pre: "20",
+      imp: "20"
+
+
   }
   render() {
-    const {city, fecha, product, cost, use, tel } = this.state;
+    const {city, fecha, product, cost, use, tel, cant, pre, imp } = this.state;
     return(
       <div className="god">
            <header>
@@ -34,18 +39,19 @@ class Format extends React.Component {
                      <td>Fecha: {fecha}</td>
                 </div>
                 <hr />
-                <div className="container">
-                  <div className="content">
-                    <td className="shit" >Art. </td>
-                    <td className="derecha">|CANT|PRECIO|IMPORT</td>
-                  </div>
-                  <hr />
-                  <div className="content">
-                    <td className="shit">{product}</td>
-                    <td className="derecha"> 1 ........{cost} .........{cost}</td>
+
+                  <div className="megdev">
+                    <td className="" >Art:  {product} </td>
+
+
+                    <section>
+                      <div class="CPI">{cant}</div>
+                      <div class="CPI">{pre}</div>
+                      <div class="CPI">{imp}</div>
+                    </section>
                   </div>
 
-                </div>
+
                   <hr />
                 <div className="megdev">
                   <tr>

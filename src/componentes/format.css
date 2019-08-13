@@ -17,11 +17,15 @@ width: 500px;
 
 
 }
-.shit {
-  max-width: 40px;
-}
-.content{
-  margin-left: 10px;
+section {
+  margin-right: 10px;
   display: flex;
+  width: 100%;
 
+
+
+}
+
+.CPI {
+  flex-grow: 1;
 }
