@@ -38,12 +38,12 @@ class App extends React.Component {
     return (
       <form onSubmit={this.handleSubmit} >
         <label>
-          Name:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
+          Ciudad:
+          <input type="text" value={this.state.city} onChange={this.handleChange} />
         </label>
         <label>
-          Name:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
+          Fecha:
+          <input type="date" value={this.state.fecha} onChange={this.handleChange} />
         </label>
         <label>
           Name:
